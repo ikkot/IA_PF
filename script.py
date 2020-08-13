@@ -5,11 +5,6 @@ from sklearn import metrics
 from sklearn import model_selection
 from PIL import Image
 
-# pip install -U scikit-learn
-# pip install numpy
-# pip install scipy
-# pip install Pillow
-
 
 # Recorta la imagen en tres partes que luego retorna
 def process_char(foto):
