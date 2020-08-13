@@ -1,3 +1,3 @@
 pip install -U scikit-learn
-pip install Pillow
+pip install -U Pillow
 python script.py
