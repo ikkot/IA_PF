@@ -5,6 +5,11 @@ from sklearn import metrics
 from sklearn import model_selection
 from PIL import Image
 
+# pip install -U scikit-learn
+# pip install numpy
+# pip install scipy
+# pip install Pillow
+
 
 # Recorta la imagen en tres partes que luego retorna
 def process_char(foto):
@@ -79,7 +84,7 @@ def split(mat, mat_res):
     print("End")
 
 
-# TraiLeterple vector machine
+# Train Simple vector machine
 def train_SVM():
     print("Prosesando...")
     # Digit
@@ -89,7 +94,8 @@ def train_SVM():
 
     # Number
     clf_d = svm.SVC(max_iter=-1, kernel='linear',
-                    decision_function_shape='ovr', cache_size=800, degree=1, gamma='auto')Test data_train_d, y_train_d)
+                    decision_function_shape='ovr', cache_size=800, degree=1, gamma='auto')
+    clf_d.fit(X_train_d, y_train_d)
 
     print("Fin")
     return (clf_l, clf_d)
