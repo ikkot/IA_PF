@@ -114,7 +114,8 @@ def print_patente(l, d):
         txt = txt+chr(ele)
     for ele in d:
         txt = txt+chr(ele)
-    print(txt)
+    print("La patente es : "+txt)
+    print()
 
 
 print("###########################################################################")
@@ -155,8 +156,10 @@ while (True):
         print("Desea probar ejemplo (S/n): ", end="")
         opt = input()
         if(opt == "" or opt == "S" or opt == "s"):
-            print("Ingrese path ejemplo: ", end="")
+            print("Ingrese path ejemplo (img_test/img_1.jpeg): ", end="")
             path_tem = input()
+            if(path_tem == ""):
+                path_tem = "img_test/img_1.jpeg"
             (test_l, test_d) = crop_n_l(path_tem)
             print_patente(clf_l.predict(test_l), clf_d.predict(test_d))
         else:
