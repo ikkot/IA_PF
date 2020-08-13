@@ -5,11 +5,6 @@ from sklearn import metrics
 from sklearn import model_selection
 from PIL import Image
 
-# pip install -U scikit-learn
-# pip install numpy
-# pip install scipy
-# pip install Pillow
-
 
 # Recorta la imagen en tres partes que luego retorna
 def process_char(foto):
@@ -101,7 +96,7 @@ def train_SVM():
     return (clf_l, clf_d)
 
 
-# **Test dataset**
+# Data test
 def analyzeT(y_pred_l, y_pred_d):
     # Letra
     print("---------- Letra ----------")
@@ -111,9 +106,8 @@ def analyzeT(y_pred_l, y_pred_d):
     print("---------- Digito ----------")
     print(metrics.classification_report(y_test_d, y_pred_d))
 
+
 # Imprimir patente
-
-
 def print_patente(l, d):
     txt = ""
     for ele in l:
@@ -127,6 +121,7 @@ print("#########################################################################
 print("-------------------------------- IA ---------------------------------------")
 print("###########################################################################")
 print()
+
 # Ejecutar
 while (True):
     print("Ingrese path del dataset (/dataset): ", end="")
